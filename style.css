@@ -30,6 +30,20 @@ main.content {
   align-items: center; /* 中身（.Bakayarou）を完全に真ん中に寄せる */
 }
 
+
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+main.content {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+
+
 body{
   font-family: sans-serif;
   display: flex;
