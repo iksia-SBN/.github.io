@@ -1,3 +1,6 @@
+
+
+
 *{
   margin: 0;
   padding: 0;
@@ -22,14 +25,12 @@
   color: #333333;
   font-family: sans-serif;
 }
-
 main.content {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center; /* 中身（.Bakayarou）を完全に真ん中に寄せる */
 }
-
 
 html, body {
   margin: 0 !important;
@@ -41,6 +42,11 @@ main.content {
   padding: 0 !important;
   width: 100% !important;
 }
+
+
+
+
+
 
 
 
@@ -64,24 +70,30 @@ body{
   pointer-events: auto;
 }
 
-.Bakayarou {
-  box-sizing: border-box;
+.Bakayarou{
   background: radial-gradient(#f5f5ffee, #f5f5ff);
   padding: 24px;
   border-radius: 10px;
   box-shadow: 0 20px 20px #1655a5;
-  
-  width: calc(100% - 8px); /* 左右に16pxずつの空き */
   max-width: 600px;
-  margin: 20px auto;        /* 上下20px、左右は自動で均等（中央寄せ） */
+  width: calc(100% - 1px);
+  margin: 0 auto;
   pointer-events: auto;
+  overflow: hidden;          /* 万が一中身がみ出しても見切れず収める */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 797px) {
   .Bakayarou {
-    /* 左右の余白（16px）を引いた幅にし、画面内に必ず収める */
-    width: calc(100% - 66.6px) !important;
-}}
+    width: calc(100% - 33.3px) !important;
+    
+    /* スマホ用に内側の余白を少し狭くする */
+    padding: 6px !important;
+    
+    /* 左右中央に寄せる */
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
 
 /* 中に画像がある場合はこれも自動で縮小させる */
 .Bakayarou img {
@@ -237,6 +249,67 @@ p{
   height: 100% !important;
   border: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
