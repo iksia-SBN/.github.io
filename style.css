@@ -51,6 +51,16 @@ body{
   width: calc(100% - 32px);
   margin: 0 auto;
   pointer-events: auto;
+  /* ▼ 中身のはみ出しを防ぐ決定打 ▼ */
+  overflow-wrap: break-word; /* 長い文字・URLを自動で改行 */
+  overflow: hidden;          /* 万が一中身がみ出しても見切れず収める */
+}
+
+/* 中に画像がある場合はこれも自動で縮小させる */
+.Bakayarou img {
+  max-width: 100%;
+  height: auto;
+}
 }
 
 img {
