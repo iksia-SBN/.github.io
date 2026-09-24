@@ -22,6 +22,14 @@
   color: #333333;
   font-family: sans-serif;
 }
+
+main.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 中身（.Bakayarou）を完全に真ん中に寄せる */
+}
+
 body{
   font-family: sans-serif;
   display: flex;
@@ -48,27 +56,18 @@ body{
   border-radius: 10px;
   box-shadow: 0 20px 20px #1655a5;
   max-width: 600px;
-  width: calc(100% - 32px); /* ← 【変更】スマホの画面端に引っ付かないよう余白を残す */
+  width: calc(100% - 32px);
   margin: 0 auto;
   pointer-events: auto;
-/* ▼ 中身のはみ出しを防ぐ決定打 ▼ */
-  overflow-wrap: break-word; /* 長い文字・URLを自動で改行 */
+  overflow-wrap: break-word;
   overflow: hidden;          /* 万が一中身がみ出しても見切れず収める */
 }
 
 @media (max-width: 768px) {
   .Bakayarou {
     /* 左右の余白（16px）を引いた幅にし、画面内に必ず収める */
-    width: calc(100% - 32px) !important;
-    
-    /* スマホ用に内側の余白を少し狭くする */
-    padding: 16px !important;
-    
-    /* 左右中央に寄せる */
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-}
+    width: calc(100% - 5px) !important;
+}}
 
 /* 中に画像がある場合はこれも自動で縮小させる */
 .Bakayarou img {
