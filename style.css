@@ -56,6 +56,20 @@ body{
   overflow: hidden;          /* 万が一中身がみ出しても見切れず収める */
 }
 
+@media (max-width: 768px) {
+  .Bakayarou {
+    /* 左右の余白（16px）を引いた幅にし、画面内に必ず収める */
+    width: calc(100% - 32px) !important;
+    
+    /* スマホ用に内側の余白を少し狭くする */
+    padding: 16px !important;
+    
+    /* 左右中央に寄せる */
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
 /* 中に画像がある場合はこれも自動で縮小させる */
 .Bakayarou img {
   max-width: 100%;
