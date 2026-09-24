@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOMEPA䃊</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body><canvas id="c"></canvas>
+  <main class="content">
+<div class="Bakayarou">
+<img src="img/Header.PNG" alt="ようこそ">
+
+<h1>䃊のおうち</h1>
+
+<p>
+まとまりが欲しいので家になってみました。<br><b>各種プラットフォームでのアカウントのリンク</b>や<b>配布物</b>を皆様にお届け！</p><p>枠の外をクリックすると背景模様を再生成できるぞ。
+</p>
+<div class="hitokoto-box">
+  <span class="box-title">今日のひとこと</span>
+  <div class="hitokoto" id="random-message">
+  </div>
+</div>
+<script>
+  const messages=[
+    { text: "お命てぇてぇ", weight: 1 },
+    { text: "かんかかきかくか", weight: 1 },
+    { text: "うなぎ〜", weight: 1 },
+    { text: "晦日に月が1000個ぐらい出る", weight: 1 },
+    { text: "明日のお日様ガチ西ずんだ", weight: 1 },
+    { text: "自己中心主義を突き詰めればひとに優しくすることがいかに大切かがわかると思う。", weight: 1 },
+    { text: "これは画期的な考えだ！と思っても、何か大切なことをわざと見落としているだけということがある。", weight: 1 },
+    { text: "大事なのは何に疑問を持つかを選ぶことだよ。道すがらのコンクリートブロックにいちいち気を取られているわけにはいかないし。", weight: 1 },
+    { text: "ひとからの信頼は財産だよ<br>お友達や家族を大切にね", weight: 1 },
+    { text: "誕生日おめでとう🎉🎉", weight: 1 },
+    { text: "あることが解らなかった頃には戻れない。でも子供から大人になるようなものよ。問題じゃないはず。", weight: 1 },
+    { text: " あたり！<br>おめでとう", weight: 1 },
+    { text: "頑張りすぎちゃダメだよ<br>自分の機嫌を取ることも必要", weight: 1 },
+    { text: "川の上流に住んでいることから上流階級と呼ばれている。", weight: 1 },
+    { text: "悪いことっていうのは<br>人からの信頼を損なうことだよ。人に信じてもらいたいならやらない。", weight: 1 },
+    { text: "チョンチーはしいたけ目じゃないと思う", weight: 1 },
+    { text: "ことばというのは型紙のようなものだ。紙という大きな世界から、わたしたちは決まった形しか切り抜けない。切り抜くのが下手な人はとことん下手だ。", weight: 1 },
+    { text: "肉体を失ったら少なくとも物理的に存在できる自由も失ってしまう。肉体は決してわたしたちを閉じ込める檻じゃないよ。", weight: 1 }
+  ];
+  function getRandomMessage(items) {
+    const totalWeight = items.reduce((sum, item) => sum + item.weight, 0);
+    let randomNum = Math.random() * totalWeight;
+    for (const item of items) {
+    if (randomNum < item.weight) {
+      return item.text;
+    }
+    randomNum -= item.weight;
+    }
+  }
+  const targetElement = document.getElementById("random-message");
+  targetElement.innerHTML = getRandomMessage(messages);
+</script>
+
+<h1>さまざまな䃊</h1>
+<ul class="links"><li>
+
+  <a href="https://bsky.app/profile/sbn11111111.bsky.social" target="_blank" rel="noopener noreferrer">
+  <img src="img/icon-bluesky.PNG" alt="" class="icon">Bluesky䃊
+  </a>
+</li><li>
+  <a href="https://note.com/sbn1" target="_blank" rel="noopener noreferrer">
+  <img src="img/icon-note.PNG" alt="" class="icon">Note䃊
+  </a>
+</li><li>
+  <a href="https://www.pixiv.net/users/107125429" target="_blank" rel="noopener noreferrer">
+  <img src="img/icon-pixiv.PNG" alt="" class="icon">Pixiv䃊
+</a>
+</li><li>
+  <a href="https://b23.tv/W2VzxTS" target="_blank" rel="noopener noreferrer">
+  <img src="img/icon-bili.PNG" alt="" class="icon">Bilibili䃊
+  </a>
+</li><li>
+  <a href="https://www.nicovideo.jp/user/129360811?ref=nicoiphone_other" target="_blank" rel="noopener noreferrer">
+  <img src="img/icon-nico.PNG" alt="" class="icon">Niconico苴
+  </a>
+</li><li>
+  <a href="https://tinyurl.com/49cnfrtt" target="_blank" rel="noopener noreferrer">
+  <img src="img/icon-mashmallow.PNG" alt="" class="icon">Mashmallow石苴
+  </a>
+</li><li>
+  <a href="https://youtube.com/channel/UCWdbuRmH5DDI8hBEn92euHw?si=dzIGHEmGTzdWBcjB" target="_blank" rel="noopener noreferrer">
+  <img src="img/icon-youtube.PNG" alt="" class="icon">Youtube苴
+  </a>
+</li>
+</ul>
+
+
+<div class="hitokoto-box">
+  <span class="box-title">tips</span>
+  <p>䃊はさいきん広告の多いYoutubeや改悪の連なるXにはうんざりしていて、あまり<b>XとYoutubeは使いたくない</b>みたいだよ。
+  </p>
+</div>
+
+
+<h1>䃊の配布物</h1>
+<ul class="links"><li>
+
+<a href="img/icon-youtube.PNG" download="感光性">感光性MIDI</a>
+</li>
+</ul>
+<p>midiはなんか状態が悪いから多めに見て。まだこれしかないけど追々UTAU音源とかも配布したい。</p>
+<h1>䃊のたぶん最新動画を確認</h1>
+<div class="douga"><iframe 
+  width="400" 
+  height="300" 
+  src="https://youtu.be/cspnBpEAIww?si=oJ0xPK0epE5yF919" 
+  frameborder="0" 
+  allowfullscreen>
+</iframe></div>
+
+
+<div class="note">
+    声もちもち
+</div>
+</main>
+
+<script src="script.js"></script>
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

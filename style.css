@@ -1,0 +1,242 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  display: block;
+}
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #333333;
+  font-family: sans-serif;
+}
+body{
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #0088d000;
+  pointer-events: none;
+}
+#c{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  display: block;
+  pointer-events: auto;
+}
+
+.Bakayarou{
+  background: radial-gradient(#f5f5ffee, #f5f5ff);
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 20px 20px #1655a5;
+  max-width: 600px;
+  width: 100%;
+  pointer-events: auto;
+}
+
+img {
+  width:600px;
+  height:auto; 
+}
+img {
+  max-width:100%;
+  height:auto;
+}
+
+
+
+/*ここから文字*/
+
+h1{
+  color: #1655a5;
+  font-size: 2rem;
+  margin-top: 0;
+  text-align: center;
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: #f5f5ff;
+  text-stroke: 3px;
+  paint-order: stroke;
+  margin-top: 20px;    /* 上に20pxの空白 */
+  margin-bottom: 20px; /* 下に20pxの空白 */
+}
+p{
+  color: #1655a5;
+  fomto-size: 1rem;
+  text-align:center;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.note{
+  font-size: 1rem;
+  margin-top: 0;
+  text-align: center;
+}
+.hitokoto-box{
+  position: relative;
+  width: 300px;
+  padding: 30px 20px 20px;
+  margin: 20px auto;
+  border: 2px solid #1655a5; 
+  border-radius: 8px;     
+  background-color: #f5f5ff; 
+  box-shadow: 6px 6px 0px #1655a5; 
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.hitokoto-box .box-title{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  color:#0088d0;
+  white-space: nowrap;
+  font-size: 1.7rem;
+      
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: #f5f5ff;
+  text-stroke: 3px;
+  paint-order: stroke;
+}
+.hitokoto-box .hitokoto{
+  text-align: center;
+  font-size: 1.2rem;
+  color: #1655a5;
+}
+
+
+
+
+
+/*ここからリンクたち*/
+
+
+.links{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 11px;
+  list-style: none;
+  padding: 0;
+  max-width: 400px;
+  margin: 0 auto;
+
+  margin-top: 20px;    /* 上に20pxの空白 */
+  margin-bottom: 20px; /* 下に20pxの空白 */
+}
+.links{
+  text-align: center;
+}
+
+.links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #f4963e;
+  font-size: 1.0rem;
+  text-decoration: none;
+  padding: 10px 16px;
+  border: 1px solid #0088d0;
+  border-radius: 8px;
+  background-color: #f5f5ff;
+ 
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: #f5f5ff;
+  text-stroke: 3px;
+  paint-order: stroke;
+}
+.links a:hover {
+  background-color: #fff8f0;
+}
+.links .icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+
+@media (max-width: 500px) {
+  .link-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/*その他*/
+
+.douga {
+  width:100%;
+  max-width:640px;
+  aspect-ratio:4/3;
+  margin: 0 auto;
+  text-align:center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
