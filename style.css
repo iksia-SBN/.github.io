@@ -57,7 +57,7 @@ body{
   border-radius: 10px;
   box-shadow: 0 20px 20px #1655a5;
   
-  width: calc(100% - 32px); /* 左右に16pxずつの空き */
+  width: calc(100% - 8px); /* 左右に16pxずつの空き */
   max-width: 600px;
   margin: 20px auto;        /* 上下20px、左右は自動で均等（中央寄せ） */
   pointer-events: auto;
