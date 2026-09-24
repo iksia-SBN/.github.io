@@ -48,10 +48,10 @@ body{
   border-radius: 10px;
   box-shadow: 0 20px 20px #1655a5;
   max-width: 600px;
-  width: calc(100% - 32px);
+  width: calc(100% - 32px); /* ← 【変更】スマホの画面端に引っ付かないよう余白を残す */
   margin: 0 auto;
   pointer-events: auto;
-  /* ▼ 中身のはみ出しを防ぐ決定打 ▼ */
+/* ▼ 中身のはみ出しを防ぐ決定打 ▼ */
   overflow-wrap: break-word; /* 長い文字・URLを自動で改行 */
   overflow: hidden;          /* 万が一中身がみ出しても見切れず収める */
 }
@@ -74,7 +74,7 @@ img {
 
 html, body {
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden; /* 横スクロールを強制的に禁止する */
 }
 
 
@@ -199,13 +199,16 @@ p{
 /*その他*/
 
 .douga {
-  width:100%;
-  max-width:640px;
+  box-sizing: border-box;
+  width: min(100%, 640px);
   aspect-ratio:4/3;
   margin: 0 auto;
-  text-align:center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  text-align:center;margin: 20px auto;
+}
+.douga iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: none;
 }
 
 
