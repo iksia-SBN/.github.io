@@ -50,17 +50,17 @@ body{
   pointer-events: auto;
 }
 
-.Bakayarou{
+.Bakayarou {
+  box-sizing: border-box;
   background: radial-gradient(#f5f5ffee, #f5f5ff);
   padding: 24px;
   border-radius: 10px;
   box-shadow: 0 20px 20px #1655a5;
+  
+  width: calc(100% - 32px); /* 左右に16pxずつの空き */
   max-width: 600px;
-  width: calc(100% - 32px);
-  margin: 0 auto;
+  margin: 20px auto;        /* 上下20px、左右は自動で均等（中央寄せ） */
   pointer-events: auto;
-  overflow-wrap: break-word;
-  overflow: hidden;          /* 万が一中身がみ出しても見切れず収める */
 }
 
 @media (max-width: 768px) {
